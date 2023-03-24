@@ -5,12 +5,14 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.mhnewland.model.Speaker;
 import com.mhnewland.repository.SpeakerRepository;
 
 @Service("speakerService")
+@Profile("dev")
 public class SpeakerServiceImpl implements SpeakerService {
     
     private SpeakerRepository repository;
